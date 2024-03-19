@@ -29,14 +29,27 @@ brew cleanup
 
 # Define an array of packages to install using Homebrew.
 packages=(
+    "awscli"
+    "aws-sam-cli"
+    "ca-certificates"
+    "bitwarden-cli"
+    "cfn-lint"
+    "git-remote-codecommit"
     "python"
+    "openjdk"
+    "openssl@3"
     "bash"
     "zsh"
+    "zsh-syntax-highlighting"
     "git"
     "tree"
     "pylint"
     "black"
     "node"
+    #"powerlevel10k" # zsh theme
+    "pygments" # synthax highlither
+    "telnet"
+    "starship" # shell https://starship.rs/
 )
 
 # Loop over the array to install each application.
@@ -54,6 +67,11 @@ echo "Changing default shell to Homebrew zsh"
 echo "$(brew --prefix)/bin/zsh" | sudo tee -a /etc/shells >/dev/null
 # Set the Homebrew zsh as default shell
 chsh -s "$(brew --prefix)/bin/zsh"
+
+# Configure zsh & terminal
+
+
+
 
 # Git config name
 echo "Please enter your FULL NAME for Git configuration:"
@@ -75,19 +93,38 @@ $(brew --prefix)/bin/npm install --global prettier
 
 # Define an array of applications to install using Homebrew Cask.
 apps=(
-    "google-chrome"
-    "firefox"
-    "brave-browser"
-    "sublime-text"
-    "visual-studio-code"
-    "virtualbox"
-    "spotify"
-    "discord"
-    "google-drive"
-    "gimp"
-    "vlc"
-    "rectangle"
+    # "bitwarden"
+    # "keepassxc"
+    "anaconda"
+    "docker"
+    "alt-tab"
+    "maccy" # clipboard manager https://maccy.app/
+    "obsidian"
     "postman"
+    # "raycast"
+    # "google-chrome"
+    "firefox"
+    # "brave-browser"
+    # "microsoft-edge"
+    "sublime-text"
+    # "visual-studio-code"
+    # "leapp"
+    # "snagit"
+    # "codewhisperer"
+    # "microsoft-teams"
+    # "microsoft-office"
+    "spotify"
+    # "google-drive"
+    # "dropbox"
+    # "betterdisplay"
+    # "vlc"
+    # "rectangle"
+    "warp"
+    "whatsapp"
+    # "commander-one"
+    # "jabra-direct"
+    # "tradingview"
+    # "drawio"
 )
 
 # Loop over the array to install each application.
